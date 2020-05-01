@@ -8,7 +8,6 @@ public class Synonym{
 		
         Map<String, Set<String>> reqdMap = new HashMap<String, Set<String>>();
 
-      //Form the set corresponding to apple.
         Set<String> wordset1 = new HashSet<String>();
         wordset1.add("GoodMorning");
         wordset1.add("Shubhodaya");
