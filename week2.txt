@@ -1,0 +1,23 @@
+
+Step-1 
+mongod --replSet "rs0" --bind_ip localhost,<hostname(s)|ip address(es)>
+
+
+Step-2
+mongo
+
+Step-3
+rs.initiate( {
+   _id : "rs0",
+   members: [
+      { _id: 0, host: "mongodb0.example.net:27017" },
+      { _id: 1, host: "mongodb1.example.net:27017" },
+      { _id: 2, host: "mongodb2.example.net:27017" }
+   ]
+})
+
+Step-4
+rs.conf()
+
+Step-5
+Use rs.status() to identify the primary in the replica set.
